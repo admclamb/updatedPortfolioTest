@@ -1,0 +1,247 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Resetting everything */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-font: #fff;
+  --green-light: #008a50;
+  --background-dark: #313f44;
+  --background-darkest: #232d31;
+}
+
+h1,
+h2 h3 {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--main-font);
+  font-size: 1.2em;
+  background: var(--background-dark);
+}
+
+/* Colors */
+.green-main {
+  color: var(--green-light);
+}
+
+/* Header */
+.header {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(
+      to bottom,
+      #5a727a05,
+      #313f440c,
+      #313f4415,
+      #313f44
+    ),
+    url(img/heroMain.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.logo {
+  color: var(--green-light);
+  text-align: center;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.nav-link {
+  color: var(--main-font);
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 1.3em 1.3em 1.3em 1.3em;
+}
+
+.nav-link:hover {
+  color: var(--green-light);
+  border-bottom: solid #008a50;
+}
+
+/* Hero content */
+
+.hero-container {
+  display: flex;
+  float: right;
+  flex-direction: column;
+  margin: 100px 400px 0 0;
+}
+
+.intro {
+  animation-duration: 2s;
+  animation-name: toRight;
+}
+
+.intro-sub {
+  animation-duration: 2s;
+  animation-name: toLeft;
+}
+
+.intro-btn {
+  animation-duration: 2s;
+  animation-name: toUp;
+}
+
+/* Animations For hero */
+
+@keyframes toRight {
+  from {
+    transform: translateX(-40px);
+    opacity: 0%;
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes toLeft {
+  from {
+    transform: translateX(40px);
+    opacity: 0%;
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes toUp {
+  from {
+    transform: translateY(60px);
+    opacity: 0%;
+  }
+
+  30% {
+    opacity: 0%;
+  }
+  80% {
+    transform: translateY(-5px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.intro {
+  padding-bottom: 10px;
+}
+
+/* Button utilities */
+.btn {
+  padding: 20px;
+  text-decoration: none;
+}
+
+.btn--green-main {
+  color: #fff;
+  padding: 12px 12px;
+  background: linear-gradient(to right, #06aa66, var(--green-light));
+  border-radius: 4px;
+}
+
+.btn--green-main:hover {
+  background: linear-gradient(to right, #089258, #00502f);
+  transform: translateY(-3px);
+}
+
+/* Hero button */
+.learn-more {
+  margin-top: 20px;
+  width: 6.5em;
+}
+
+/* Main content */
+.main-container {
+  display: flex;
+  justify-content: center;
+}
+.about-container {
+  background-color: var(--background-darkest);
+  width: 50%;
+  border-radius: 16px;
+  padding: 40px;
+}
+
+.about-article p,
+.hr {
+  margin-bottom: 20px;
+}
+
+/* Thinkful links */
+
+.thinkful-link {
+  color: #00d87e;
+  text-decoration: none;
+}
+
+.thinkful-link:hover {
+  color: #3ef0a6;
+  transform: translateY(-2px);
+}
+
+/* Skills list */
+
+.skills-header {
+  margin-bottom: 10px;
+}
+.skills {
+  margin: 0 0 20px 20px;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 200px;
+  background-color: var(--background-darkest);
+  padding: 20px 60px;
+}
+
+.footer-left {
+  padding-left: 80px;
+}
+
+.footer-right {
+  padding-right: 80px;
+}
+
+.fab {
+  color: #fff;
+  padding: 10px;
+}
+
+.fab:hover {
+  color: rgb(170, 170, 170);
+  transform: translateY(-2px);
+}
