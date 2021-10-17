@@ -11,7 +11,8 @@ html {
 
 :root {
   --main-font: #fff;
-  --green-light: #008a50;
+  --green-light: #00d17a;
+  --green-dark: #008a50;
   --background-dark: #313f44;
   --background-darkest: #232d31;
 }
